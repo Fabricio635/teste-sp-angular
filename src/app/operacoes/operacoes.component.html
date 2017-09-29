@@ -1,0 +1,34 @@
+<div class="table-container mat-elevation-z8">
+  <md-table #table [dataSource]="dataSource">
+    <ng-container mdColumnDef="codigo">
+      <md-header-cell *mdHeaderCellDef> Cod. </md-header-cell>
+      <md-cell *mdCellDef="let operacao"> {{operacao.codigo}} </md-cell>
+    </ng-container>
+    <ng-container mdColumnDef="tipo_mercadoria">
+      <md-header-cell *mdHeaderCellDef> Tipo </md-header-cell>
+      <md-cell *mdCellDef="let operacao"> {{operacao.tipo_mercadoria}} </md-cell>
+    </ng-container>
+    <ng-container mdColumnDef="nome">
+      <md-header-cell *mdHeaderCellDef> Nome </md-header-cell>
+      <md-cell *mdCellDef="let operacao"> {{operacao.nome}} </md-cell>
+    </ng-container>
+    <ng-container mdColumnDef="quantidade">
+      <md-header-cell *mdHeaderCellDef> Qtd </md-header-cell>
+      <md-cell *mdCellDef="let operacao"> {{operacao.quantidade}} </md-cell>
+    </ng-container>
+    <ng-container mdColumnDef="preco">
+      <md-header-cell *mdHeaderCellDef> Preço R$ </md-header-cell>
+      <md-cell *mdCellDef="let operacao"> {{operacao.preco}} </md-cell>
+    </ng-container>
+    <ng-container mdColumnDef="tipo_operacao">
+      <md-header-cell *mdHeaderCellDef> Operação </md-header-cell>
+      <md-cell *mdCellDef="let operacao"> {{operacao.tipo_operacao}} </md-cell>
+    </ng-container>
+    <ng-container mdColumnDef="data_operacao">
+      <md-header-cell *mdHeaderCellDef> Data </md-header-cell>
+      <md-cell *mdCellDef="let operacao"> {{operacao.data_operacao}} </md-cell>
+    </ng-container>
+    <md-header-row *mdHeaderRowDef="displayedColumns"></md-header-row>
+    <md-row *mdRowDef="let row; columns: displayedColumns;"></md-row>
+  </md-table>
+</div>

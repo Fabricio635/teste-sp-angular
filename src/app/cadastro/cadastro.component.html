@@ -1,0 +1,38 @@
+<form class="cadastro-form" #cadastroForm="ngForm" (ngSubmit)="onSubmit()">
+  <md-form-field class="cadastro-form-field">
+    <input mdInput placeholder="Código da mercadoria" [formControl]="myFormControl" [(ngModel)]="userInput.codigo">
+    <md-error *ngIf="myFormControl.hasError('required')">
+      Campo <strong>obrigatório</strong>
+    </md-error>
+  </md-form-field>
+  <md-form-field class="cadastro-form-field">
+    <input mdInput placeholder="Tipo da mercadoria" [formControl]="myFormControl" [(ngModel)]="userInput.tipo_mercadoria">
+    <md-error *ngIf="myFormControl.hasError('required')">
+      Campo <strong>obrigatório</strong>
+    </md-error>
+  </md-form-field>
+  <md-form-field class="cadastro-form-field">
+    <input mdInput placeholder="Nome da mercadoria" [formControl]="myFormControl" [(ngModel)]="userInput.nome">
+    <md-error *ngIf="myFormControl.hasError('required')">
+      Campo <strong>obrigatório</strong>
+    </md-error>
+  </md-form-field>
+  <md-form-field class="cadastro-form-field">
+    <input mdInput placeholder="Quantidade" type="number" [formControl]="myFormControl" [(ngModel)]="userInput.qtd">
+    <md-error *ngIf="myFormControl.hasError('required')">
+      Campo <strong>obrigatório</strong>
+    </md-error>
+  </md-form-field>
+  <md-form-field class="cadastro-form-field">
+    <input mdInput placeholder="Preço" type="number" [formControl]="myFormControl" [(ngModel)]="userInput.preco">
+    <md-error *ngIf="myFormControl.hasError('required')">
+      Campo <strong>obrigatório</strong>
+    </md-error>    
+  </md-form-field>
+  <md-button-toggle-group [(ngModel)]="userInput.tipo_operacao" class="toggle-group" name="tipo_operacao">  	
+  	<md-button-toggle value="1">Compra</md-button-toggle>
+  	<md-button-toggle value="2">Venda</md-button-toggle>
+  </md-button-toggle-group>
+  <br><br>
+  <button md-raised-button color="accent" type="submit" [disabled]="!cadastroForm.form.valid" class="button-submit">Enviar</button>
+</form>

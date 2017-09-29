@@ -1,0 +1,7 @@
+<md-toolbar color="primary">
+  <a routerLink="/cadastro" md-button>CADASTRO</a>
+  <a routerLink="/operacoes" md-button>OPERAÇÕES</a>
+  <span class="spacer"></span>
+  <button md-icon-button (click)="refresh()" *ngIf="ifButtonRefresh"><md-icon class="bar-icon" >refresh</md-icon></button>
+</md-toolbar>
+<router-outlet></router-outlet>

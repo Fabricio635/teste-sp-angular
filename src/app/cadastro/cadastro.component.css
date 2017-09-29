@@ -1,0 +1,32 @@
+
+.cadastro-form {
+	width: 98%;
+	margin: 10px;
+	margin-top: 15px;
+}
+
+.cadastro-form-field {
+	width: 98%;
+}
+
+@media only screen and (min-width: 768px) {
+    .cadastro-form-field {
+		width: 49%;
+		float: left;
+		margin-left: 1%;
+	}
+
+	.cadastro-form {
+		width: 100%;
+		margin: 0;
+	}
+
+	.toggle-group {
+		margin-left: 10px;
+		margin-top: 8px;
+	}
+
+	.button-submit {
+		margin-left: 10px;
+	}
+}
